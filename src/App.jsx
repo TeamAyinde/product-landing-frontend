@@ -153,7 +153,7 @@ function RequestModal({ product, onClose }) {
       setSent(true)
     } catch (err) {
       if (err.message && err.message.includes('Failed to fetch')) {
-        setError('Cannot reach backend. Is Flask running? Run: py app.py in backend folder (http://127.0.0.1:5000)')
+        setError('Cannot reach back end. Is Flask running? Run: py app.py in backend folder (http://127.0.0.1:5000)')
       } else {
         setError(err.message || 'Failed to send request. Please try again.')
       }
